@@ -45,23 +45,79 @@ code {
     min-width: 480px;
     height: 42px;
 }
+.search-input::placeholder {
+    font-weight: 600;
+    font-size: 14px;
+    opacity: 0.5;
+    padding-left: 16px;
 
+}
+.clear-btn {
+    position: absolute;
+    right: 32px;
+    top: 9px;
+
+
+    opacity: 0.3;
+    cursor:pointer;
+}
 .search-clear-btn {
-    width: 24px;
+/*    width: 24px;
     height: 24px;
     border-radius: 50%;
     border: 1px solid #DDDDDD;
     background: #fff;
     position: absolute;
     top: 25%;
-    right: 16px;
+    right: 16px;*/
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border: none;
 }
 
-.tag {
-    background-color: #DDDDDD;
-    border-radius: 30px;
+.clear-btn:hover {
+    opacity: 1;
+}
+.clear-btn:before, .clear-btn:after {
+    position: absolute;
+    left: 15px;
+    top: 5px;
+    content: ' ';
+    background-color: #333;
+}
+.search-clear-btn:before, .search-clear-btn:after {
 
-    padding: 8px 8px 8px 8px;
+    height: 24px;
+    width: 2px;
+}
+.search-clear-btn:before {
+    transform: rotate(45deg);
+}
+.search-clear-btn:after {
+    transform: rotate(-45deg);
+}
+
+.tag-wrapper {
+    background: #ccc;
+    border-radius: 40px;
+    padding: 0px 16px 0px 16px;
+    height: 36px;
+    box-sizing: border-box;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+.tag-wrapper:last-child {
+    margin-right: 0;
+
+}
+.tag {
+
+
+
 }
 
 .tag-select {
@@ -69,33 +125,78 @@ code {
     color: #fff;
     font-weight: 600;
 }
-
-.tags {
+.main-tags {
     margin-top: 32px;
+}
+.tags {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .tag-children {
-    margin-top: 16px;
+    margin-top: 32px;
+    align-items: baseline;
+}
+.children {
+    margin-bottom: 8px;
     display: flex;
     align-items: baseline;
 }
-
+.children:last-child {
+    margin-bottom: 0;
+}
 .tag-parent-name {
-
+    margin-right: 8px;
 }
 
 .tag-name {
-    margin-left: 8px;
+
+
 }
 
 .tag-delete {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    border: 1px solid #DDDDDD;
+    display: block;
+    margin-left: 16px;
+    background: transparent;
+    border: 0;
+    outline: none;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    position: relative;
     background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+.tag-delete:hover {
+    background: #fff;
+    opacity: 1;
+}
+.tag-delete:before, .tag-delete:after {
+    content: "";
+    display: block;
+    width: 13px;
+    height: 2px;
+    background: #d0d0d0;
+    transform-origin: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 2px;
+
+}
+
+.tag-delete:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.tag-delete:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.tag-delete:hover:before,.tag-delete:hover:after {
+    opacity: 1;
+    background-color: #ef9191;
 }
 
 .project-btn {
@@ -107,6 +208,7 @@ code {
 }
 
 .project-items {
+    margin-top: 32px;
     display: flex;
     align-items: center;
 }

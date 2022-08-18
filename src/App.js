@@ -17,7 +17,7 @@ function App() {
                     <h1 className="main-title">Название проекта</h1>
                     <form className="main-search-form">
                         <input className="search-input" placeholder="Найти"/>
-                        <button className="search-clear-btn"></button>
+                        <button className="search-clear-btn clear-btn"></button>
                     </form>
                     <div className="main-project-navigation">
                         <button className="project-btn copy"></button>
@@ -27,20 +27,51 @@ function App() {
                     </div>
                 </div>
                 <div className="main-project-body">
-                    <div className="tags">
-                        <span className="section-tag tag tag-select">Локация</span>
-                        <button className="tag-delete">x</button>
-                        <span className="section-tag tag ">Образ</span>
-                        <button className="tag-delete">x</button>
-                        <span className="section-tag tag ">Поза</span>
-                        <button className="tag-delete">x</button>
+                    <div className="main-tags tags">
+                        <div className="tag-wrapper tag-select">
+                            <span className="section-tag tag ">Локация</span>
+                        </div>
+                        <div className="tag-wrapper">
+                            <span className="section-tag tag">Образ</span>
+                        </div>
+                        <div className="tag-wrapper">
+                            <span className="section-tag tag ">Поза</span>
+                        </div>
+
+
+
                     </div>
                     <div className="tag-children ">
-                        <span className="tag-parent-name ">Локация:</span>
+                        <div className="children">
+                            <span className="tag-parent-name ">Локация:</span>
+                            <div className="tags ">
+                                <div className="tag-wrapper">
+                                    <span className="tag-name tag">Локация</span>
+                                    <button className="tag-delete"></button>
+                                </div>
 
-                        <div className="tags">
-                            <span className="tag-name tag">Локация</span>
-                            <button className="tag-delete">x</button>
+                            </div>
+                        </div>
+
+                        <div className="children">
+                            <span className="tag-parent-name ">Локация:</span>
+                            <div className="tags ">
+                                <div className="tag-wrapper">
+                                    <span className="tag-name tag">Локация</span>
+                                    <button className="tag-delete"></button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div className="children">
+                            <span className="tag-parent-name ">Локация:</span>
+                            <div className="tags ">
+                                <div className="tag-wrapper">
+                                    <span className="tag-name tag">Локация</span>
+                                    <button className="tag-delete"></button>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                     <div className="project-items">
