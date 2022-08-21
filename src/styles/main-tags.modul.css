@@ -1,0 +1,18 @@
+.maintags {
+    margin-top: 32px;
+}
+.tagwrapper:last-child {
+    margin-right: 0;
+
+}
+
+.tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.tagselect {
+    background-color: #ef9191;
+    color: #fff;
+    font-weight: 600;
+}

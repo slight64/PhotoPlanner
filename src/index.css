@@ -13,21 +13,22 @@ code {
     monospace;
 }
 
-.navigation {
-    display: flex;
-    justify-content: space-between;
-    background-color: #F4F4F4;
-
-}
-
 .main-header-wrapper {
     margin-top: 80px;
-
     display: flex;
-
     justify-content: space-between;
     align-items: center;
 }
+
+.project-btn {
+    margin-left: 8px;
+}
+.project-btn:first-child {
+    margin-left: 0;
+}
+
+
+
 
 .search-input {
     border: solid;
@@ -52,6 +53,11 @@ code {
     padding-left: 16px;
 
 }
+/*.copy {*/
+
+/*    background: center/70% no-repeat url("./icons/copy.svg");*/
+/*}*/
+
 .clear-btn {
     position: absolute;
     right: 32px;
@@ -101,7 +107,7 @@ code {
 .tag-wrapper {
     background: #ccc;
     border-radius: 40px;
-    padding: 0px 16px 0px 16px;
+    padding: 0 16px 0 16px;
     height: 36px;
     box-sizing: border-box;
     font-size: 16px;
@@ -110,29 +116,16 @@ code {
     margin-right: 8px;
     margin-bottom: 8px;
 }
-.tag-wrapper:last-child {
-    margin-right: 0;
 
-}
 .tag {
 
 
 
 }
 
-.tag-select {
-    background-color: #ef9191;
-    color: #fff;
-    font-weight: 600;
-}
-.main-tags {
-    margin-top: 32px;
-}
-.tags {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}
+
+
+
 
 .tag-children {
     margin-top: 32px;
